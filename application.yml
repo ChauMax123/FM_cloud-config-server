@@ -1,0 +1,18 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8751/eureka/
+  instance:
+    hostname: localhost
+
+microservice:
+  food-payment-service:
+    endpoints:
+      endpoint:
+        uri: http://food-payment-service/payment/foodPayment
+  food-order-service:
+    endpoints:
+      endpoint:
+        uri: http://food-order-service/order/foodOrder    
